@@ -16,7 +16,7 @@ Starter Kit components
 - Linting
 - Automated testing
 - Continuous Integration
-- Automated builf
+- Automated build
 - Automated deployment
 - Working example app
 
