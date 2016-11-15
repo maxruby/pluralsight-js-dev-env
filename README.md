@@ -40,15 +40,15 @@ JavaScript Development Environment from Pluralsight Course with Cory House
 ### Development web server
 - Configure web server
 - Services for sharing work
-Options:
-- http-server (node.js)
-- live-server (live reloading)
-- Express (comprehensive, configurable, complex APIs, production-grade, can run everywhere) - ONLY one production-ready!
-- Koa (ES6 support, server)
-- hapi
-- budo (Browserify)
-- Webpack (built into Webpack, serves from memory, includes hot realoading)
-- Browsersync (dedicated IP address on LAN for sharing, all interactions remain sync, browser and device testing devices and browsers, Webpack, Express)
+- Options:
+  - http-server (node.js)
+  - live-server (live reloading)
+  - Express (comprehensive, configurable, complex APIs, production-grade, can run everywhere) - ONLY one production-ready!
+  - Koa (ES6 support, server)
+  - hapi
+  - budo (Browserify)
+  - Webpack (built into Webpack, serves from memory, includes hot realoading)
+  - Browsersync (dedicated IP address on LAN for sharing, all interactions remain sync, browser and device testing devices and browsers, Webpack, Express)
 
 
 
