@@ -25,3 +25,14 @@ JavaScript Development Environment from Pluralsight Course with Cory House
 - Atom
 - Brackets
 - JetBrains WebStorm
+
+### Package Management
+- npm (defacto standard)
+- JSPM (good for bundling)
+- security protection
+  Node Security Platform
+    - manually:  npscheck 
+    - npm install
+    - production build
+    - pull request
+    - npm start (slight slowdown of startup)
