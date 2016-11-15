@@ -1,7 +1,7 @@
 # pluralsight-js-dev-env
 JavaScript Development Environment from Pluralsight Course with Cory House 
 
-Starter Kit components
+### Starter Kit components
 
 - Package management
 - Bundling
@@ -20,3 +20,8 @@ Starter Kit components
 - Automated deployment
 - Working example app
 
+### Js Editors
+- Visual Studio Code
+- Atom
+- Brackets
+- JetBrains WebStorm
