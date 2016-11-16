@@ -54,7 +54,7 @@ JavaScript Development Environment from Pluralsight Course with Cory House
 - localtunnel (open Firewall, easy, just npm install localtunnel)
 - ngrok (need authorization)
 - Surge (Static files only on public URL, npm install -g surge)
-- now (npm install -g now, start scrript, now => web server, no need to keep machine on)
+- now (npm install -g now, start script, now => web server, no need to keep machine on)
 
 ### Automation
 - Grunt (large, writes to disk)
@@ -106,9 +106,35 @@ Preferred approaches for encapsulating code:
 ### Bundling
 - RequireJS (first popular bundler, relies and spread AMD)
 - Browserify (takes code and npm packages, mass adoption, uses CommonJS pattern, plugin-based, packages modules at compile-time)
-- Webpack (handles more than JS, imports CSS, images, etc like JS, inline images and style per http request, hot-reloadable web server)
+- Webpack (handles more than JS, imports CSS, images, etc like JS, inline images and style per http request, hot-reloadable web server, also offers Treeshaking)
 - Rollup (Tree shaking, faster loading production code, moves into the same code, quite new, not established yet, great for library authors, not hot reloading) 
 - JSPM (SystemJS, universal module loader, can load modules at runtime, has its own package manager, can install from npm, git, uses Rollup in builder - Treeshaking)
+
+### Sourcemaps
+- Debugging transpiled and bundled ES6 code
+- Map code back to the original code (see original ES6 code)
+- Part of our build
+- Downloaded only if you open developer tools
+
+### Linting
+Automate coding standards and syntax error/convention checking
+- Why use a Linter?
+   - Enforce Consistency (Curly brace position, confirmm/alert, trailing commas, Globals, eval)
+   - Avoid mistakes (extra parenthesis, overwriting a function, assignment in conditional, missing default case in switch, debugger /console.log)
+
+- Linter options:
+  - JSLint (opinionated)
+  - JSHint
+  - ESLint (use this now)
+  - TSLint (for Typescript support)
+  
+ 
+  
+  
+   
+   
+ 
+
 
 
 
