@@ -127,7 +127,96 @@ Automate coding standards and syntax error/convention checking
   - JSHint
   - ESLint (use this now)
   - TSLint (for Typescript support)
+ 
+- Core Decisions
+ - Config format
+   - .eslintrc, eslint.yml,.. , package.json
+ - Which built-in rules
+   - decide which rules to follow
+ - Warnings or Errors
+   - errors break the build (production, team is forced to follow up), warnings can be ignored (dev), use both
+ - Which plugins
+    See https://github.com/dustinspecker/awesome-eslint
+   - eslint-plugin-react
+   - eslint-plugin-node
+   - eslint-plugin-angular
+ - Use preset instead
+    - from scratch
+    - Recommended defaults => tweak settings later
+    - airbnb, XO, standardJS
+- Implementing ESLint:
+ - No file watching option built-in
+  Solution: 
+    - eslint-loader : relint all files (Webpack)
+    - eslint-watch : wrapper around ESLint adds the file watch, not tied to webpack, better warning/error formatting, displays clean message, easily lint tests and build scripts too
+ -  No support for many JS experimental features
+  Solution:
+    - Supports ES6 and ES7 natively
+    - Also supports stage-0 to state-4 features
+    Babel ESLint is the answer
+
+While Lint via an automated build process?
+
+- one place to check
+- universal configuration
+- part of continuous integration
+
+### Testing and Continuous Integration (CI)
+- 6 key Testing decisions
+- configure and write tests
+- continuous integration
+
+JS Testing styles:
+- Unit         Single function or modules
+- Integration  Interaction between modules
+- UI           Automate interactions with UI
+
+Unit test decisions:
+
+- Framework
+  - Mocha (highly configurable, large support ecosystem)   -> use this one
+  - Jasmine (highly configurable and built-in assertions)
+  - Tape (old)
+  - QUnit
+  - AVA (parallel, runs only impacted tests)
+  - Jest (nice wrapper over Jasmine, improved)
   
+- Assertion library
+  -  expect(2+2).to.equal(4)
+  -  assert(2+2).equals(4)
+  Use Chai.js
+- Helper Library
+  - JSDOM - simulate the DOM in node.js (no need to open a browser, fast)
+  - Cheerio - jQuery for the server (virtual DOM using jQuery selectors)
+- Where to run tests
+  - Browser => Karma, Testem
+  - Headless browser => PhantomJS (V8 engine without browser)
+  - In-memory DOM => JSDOM
+- Where to place tests
+  - Centralized:  less "noise" in src folder, deployment confusion, inertia
+  - Alongside importing easier, clear visibility, convenient to open at the same time, no recreating folder structure, easier to mode files
+  - naming convention: .spec and .test are almost equally popular
+- When to run the tests
+  - 
+
+
+
+
+
+
+
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
  
   
   
