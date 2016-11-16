@@ -51,10 +51,25 @@ JavaScript Development Environment from Pluralsight Course with Cory House
   - Browsersync (dedicated IP address on LAN for sharing, all interactions remain sync, browser and device testing devices and browsers, Webpack, Express)
 
 ### Sharing work-in-progress
-- localtunnel
-- ngrok
-- Surge
-- now
+- localtunnel (open Firewall, easy, just npm install localtunnel)
+- ngrok (need authorization)
+- Surge (Static files only on public URL, npm install -g surge)
+- now (npm install -g now, start scrript, now => web server, no need to keep machine on)
+
+### Automation
+- Grunt (large, writes to disk)
+- Gulp (in-memory streams, fast because it does not write to files, code over configuration, lots of plugins)
+- npm scripts (package.json, OS command-line calls, use npm packages, call separate node scripts, convention pre/post hooks, largest package manager, no need for separate plugins, simpler debugging, better docs, easier to learn, simple)
+
+### Transpiling
+- Babel
+- Typescript
+- Elm
+
+
+
+
+
 
 
 
