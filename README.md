@@ -213,7 +213,31 @@ Testing approach decisions:
 - after save
 
 #### Continuous integration
-. set up a CI server to find out when the build breaks
+- set up a CI server to find out when the build breaks
+- Forgot dependency
+- Forgot to update package.json
+- Node version conflicts
+- Commit doesn't run cross-platform
+- did not run test suit
+- catch mistakes quickly
+
+CI Server:
+
+- Run automated build
+- Run your tests
+- Check code coverage
+- Automate deployment
+- Integrate with version control (GitHub)
+
+Options:
+
+- Travis CI (Linux / Mac)
+- Appveyor (Windows)
+- Jenkins
+
+
+
+
 
 
 
