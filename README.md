@@ -220,7 +220,6 @@ Testing approach decisions:
 - Commit doesn't run cross-platform
 - did not run test suit
 - catch mistakes quickly
-
 CI Server:
 
 - Run automated build
@@ -235,7 +234,49 @@ Options:
 - Appveyor (Windows)
 - Jenkins
 
-
+### HTTP Calls
+#### Options
+- Node
+  - http  (low-level)   => preferred if you need only node support
+  - request (string-line API, higher level)
+- Browser
+  - XMLHttpRequest (widely supported, well established)
+  - JQuery (helps avoid extra dependency)
+  - Framework-based (Angular)
+  - Fetch (polyfill needed, streamlined API, offer limited HTTP requests) => assuming you can live with limitation, best option
+- Node & Browser
+  - isomorphic-fetch (runs on both node server and browser, or Universal)
+  - xhr (npm package, subset of node http but runs on both node and browser) 
+  - SuperAgent (plugin ecosystem)
+  - Axios (Promise-based API)
+#### Centralize API calls
+- Configure all calls (base URLs, credentials)
+- Handle preloader logic (asynchronous calls)
+- Handle errors
+- Single seam for mocking
+- Selective polyfilling:
+   - Send polyfills to browsers that do not support fetch (polyfill.io)
+   
+#### Mock API
+- Why using Mock APIs?
+  - Unit Testing
+  - Instant response
+  - Keep working when services are down
+  - Rapid prototyping
+  - avoid inter-team bottlenecks
+  - work offline
+- How to mock HTTP
+  - Nock - hijack HTTP requests
+  - Static JSON (no HTTP call)
+  - Create a development webserver
+    - api-mock
+    - JSON-server (local data in a static file)
+    - JSON Schema-faker (fake data, string, number, boolean, write to file)
+    - Browsersync
+    - Express
+  
+  
+  
 
 
 
