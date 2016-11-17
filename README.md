@@ -286,9 +286,35 @@ Automate coding standards and syntax error/convention checking
   - Automated deployment
   - Codifies decisions
   - Interactive examples of worker with Starter
--  
-  
-  
+- Project structure:
+  - Put JS code in .js file:
+    - never use in-line Javascript in script tags
+    - Configuration Object Pattern
+    - Use data from the server to pass to the application, never javascript code
+  - Consider organazing by feature (not by file type)
+    - authors (all related files inside)
+    - courses
+    - Extract logic into plain old Javascript objects (POJOs) - plain logic, pure logic, no framework-specific
+
+### Production build
+- Minfication (speed page load)  => Webpack
+  - shortens variable and function names
+  - removes comments
+  - removes whitespace and new lines
+  - dead code elimination / Tree-shaking
+  - Debug via sourcemap
+
+- Sourcemaps (support debugging in production)
+- Dynamic HTML (production specific concerns)
+  - Reference bundles automatically
+  - Handle dynamic bundle names
+  - Inject production-only resources
+  - Minify
+- Cache busting (latest version of the code at deployment)
+- Bundle splitting (provide only the part of the code that has changed)
+- Error logging
+
+
   
      
      
