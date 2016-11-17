@@ -76,20 +76,20 @@ JavaScript Development Environment from Pluralsight Course with Cory House
     babel: { // }
   }
   ```
+  
 ### Bundling
 - CommonJS does not work in web browsers
 - Package project into file(s)
 - Improve Node performance
 
-### Selecting a Module formats
-- IIFE (not recommended)
-- AMD (Asynchronous Module Definition) - not recommended
-- UMD (Universal Module Definition)
-- CommonJS (CJS)
-- ES6 Modules
+- Selecting a Module formats
+  - IIFE (not recommended)
+  - AMD (Asynchronous Module Definition) - not recommended
+  - UMD (Universal Module Definition)
+  - CommonJS (CJS)
+  - ES6 Modules
 
 - Preferred approaches for encapsulating code:
-
   - CommonJS  (node) => require('')
   - ES6 Modules => import module from 'lib';
      - standardized
@@ -154,32 +154,27 @@ Automate coding standards and syntax error/convention checking
     - Also supports stage-0 to state-4 features
     Babel ESLint is the answer
 
-While Lint via an automated build process?
+- While Lint via an automated build process?
+  - one place to check
+  - universal configuration
+  - part of continuous integration
 
-- one place to check
-- universal configuration
-- part of continuous integration
-
-### Testing and Continuous Integration (CI)
+### Testing
 - 6 key Testing decisions
 - configure and write tests
 - continuous integration
-
-JS Testing styles:
-- Unit         Single function or modules
-- Integration  Interaction between modules, clicking or waiting, slow, done in QA (e.g., Selenium)
-- UI           Automate interactions with UI
-
-Unit test decisions:
-
-- Framework
-  - Mocha (highly configurable, large support ecosystem)   -> use this one
-  - Jasmine (highly configurable and built-in assertions)
-  - Tape (old)
-  - QUnit
-  - AVA (parallel, runs only impacted tests)
-  - Jest (nice wrapper over Jasmine, improved)
-  
+- JS Testing styles:
+  - Unit         Single function or modules
+  - Integration  Interaction between modules, clicking or waiting, slow, done in QA (e.g., Selenium)
+  - UI           Automate interactions with UI
+- Unit test decisions:
+  - Framework
+    - Mocha (highly configurable, large support ecosystem)   -> use this one
+    - Jasmine (highly configurable and built-in assertions)
+    - Tape (old)
+    - QUnit
+    - AVA (parallel, runs only impacted tests)
+    - Jest (nice wrapper over Jasmine, improved)
 - Assertion library
   -  expect(2+2).to.equal(4)
   -  assert(2+2).equals(4)
@@ -202,14 +197,13 @@ Unit test decisions:
   - automatic = low friction
   - increases visibility
 
-Testing approach decisions:
-
-- Mocha
-- Chai
-- JSOM
-- node
-- alongside
-- after save
+- Testing approach decisions:
+  - Mocha
+  - Chai
+  - JSOM
+  - node
+  - alongside
+  - after save
 
 #### Continuous integration
 - set up a CI server to find out when the build breaks
@@ -227,7 +221,7 @@ Testing approach decisions:
   - Automate deployment
   - Integrate with version control (GitHub)
 
-Options:
+- Options:
   - Travis CI (Linux / Mac)
   - Appveyor (Windows)
   - Jenkins
