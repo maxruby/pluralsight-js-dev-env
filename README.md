@@ -168,7 +168,7 @@ While Lint via an automated build process?
 
 JS Testing styles:
 - Unit         Single function or modules
-- Integration  Interaction between modules
+- Integration  Interaction between modules, clicking or waiting, slow, done in QA (e.g., Selenium)
 - UI           Automate interactions with UI
 
 Unit test decisions:
@@ -196,10 +196,24 @@ Unit test decisions:
   - Centralized:  less "noise" in src folder, deployment confusion, inertia
   - Alongside importing easier, clear visibility, convenient to open at the same time, no recreating folder structure, easier to mode files
   - naming convention: .spec and .test are almost equally popular
-- When to run the tests
-  - 
+- When to run the unit tests
+  - every time you save
+  - rapid feedback
+  - facilitates TDD
+  - automatic = low friction
+  - increases visibility
 
+Testing approach decisions:
 
+- Mocha
+- Chai
+- JSOM
+- node
+- alongside
+- after save
+
+#### Continuous integration
+. set up a CI server to find out when the build breaks
 
 
 
