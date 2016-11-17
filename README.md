@@ -274,6 +274,20 @@ Options:
     - JSON Schema-faker (fake data, string, number, boolean, write to file)
     - Browsersync
     - Express
+ - Mocking the API
+   - Declare the schema 
+     - JSON Schema Faker (expose objects, properties)
+     - there is also GraphQL and others that specify their own standards for handling data from an API
+   - Generate Random Data
+     - faker.js
+     - chance.js
+     - randexp.js
+   - Serve Data via API
+     - JSON Server
+     
+     
+     
+
   
   
   
