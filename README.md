@@ -66,12 +66,11 @@ JavaScript Development Environment from Pluralsight Course with Cory House
 - Typescript (Superset, type annotation, Enhanced autocompletion, safer refactoring)
 - Elm (nothing like JS, compiles down to JS, clean syntax, no parenthesis or semicolon, immutable data structures, friendly errors, all errors are compile-time, interops with JS) 
 
-Babel configuration
-
-.babelrc
-- Not npm specific
-- Eaiser to read since isolated
-package.json
+- Babel configuration
+  .babelrc
+  - Not npm specific
+  - Eaiser to read since isolated
+  package.json
   ```
   {
     babel: { // }
@@ -89,19 +88,19 @@ package.json
 - CommonJS (CJS)
 - ES6 Modules
 
-Preferred approaches for encapsulating code:
+- Preferred approaches for encapsulating code:
 
-- CommonJS  (node) => require('')
-- ES6 Modules => import module from 'lib';
-   - standardized
-   - statically analyzable (predictable at run-time)
-   - improved autocompletion
-   - intelligent refactoring
-   - fail fast and know bugs
-   - Tree shaking (eliminate unused code)
-   - easier to read
-   - Named imports (variable that reference code in your module)
-   - Default exports (how to consume modules)
+  - CommonJS  (node) => require('')
+  - ES6 Modules => import module from 'lib';
+     - standardized
+     - statically analyzable (predictable at run-time)
+     - improved autocompletion
+     - intelligent refactoring
+     - fail fast and know bugs
+     - Tree shaking (eliminate unused code)
+     - easier to read
+     - Named imports (variable that reference code in your module)
+     - Default exports (how to consume modules)
 
 ### Bundling
 - RequireJS (first popular bundler, relies and spread AMD)
@@ -220,42 +219,41 @@ Testing approach decisions:
 - Commit doesn't run cross-platform
 - did not run test suit
 - catch mistakes quickly
-CI Server:
 
-- Run automated build
-- Run your tests
-- Check code coverage
-- Automate deployment
-- Integrate with version control (GitHub)
+- CI Server:
+  - Run automated build
+  - Run your tests
+  - Check code coverage
+  - Automate deployment
+  - Integrate with version control (GitHub)
 
 Options:
-
-- Travis CI (Linux / Mac)
-- Appveyor (Windows)
-- Jenkins
+  - Travis CI (Linux / Mac)
+  - Appveyor (Windows)
+  - Jenkins
 
 ### HTTP Calls
-#### Options
-- Node
-  - http  (low-level)   => preferred if you need only node support
-  - request (string-line API, higher level)
-- Browser
-  - XMLHttpRequest (widely supported, well established)
-  - JQuery (helps avoid extra dependency)
-  - Framework-based (Angular)
-  - Fetch (polyfill needed, streamlined API, offer limited HTTP requests) => assuming you can live with limitation, best option
-- Node & Browser
-  - isomorphic-fetch (runs on both node server and browser, or Universal)
-  - xhr (npm package, subset of node http but runs on both node and browser) 
-  - SuperAgent (plugin ecosystem)
-  - Axios (Promise-based API)
-#### Centralize API calls
-- Configure all calls (base URLs, credentials)
-- Handle preloader logic (asynchronous calls)
-- Handle errors
-- Single seam for mocking
-- Selective polyfilling:
-   - Send polyfills to browsers that do not support fetch (polyfill.io)
+- Options
+  - Node
+    - http  (low-level)   => preferred if you need only node support
+    - request (string-line API, higher level)
+  - Browser
+    - XMLHttpRequest (widely supported, well established)
+    - JQuery (helps avoid extra dependency)
+    - Framework-based (Angular)
+    - Fetch (polyfill needed, streamlined API, offer limited HTTP requests) => assuming you can live with limitation, best option
+  - Node & Browser
+    - isomorphic-fetch (runs on both node server and browser, or Universal)
+    - xhr (npm package, subset of node http but runs on both node and browser) 
+    - SuperAgent (plugin ecosystem)
+    - Axios (Promise-based API)
+- Centralize API calls
+  - Configure all calls (base URLs, credentials)
+  - Handle preloader logic (asynchronous calls)
+  - Handle errors
+  - Single seam for mocking
+  - Selective polyfilling:
+     - Send polyfills to browsers that do not support fetch (polyfill.io)
    
 #### Mock API
 - Why using Mock APIs?
@@ -284,7 +282,20 @@ Options:
      - randexp.js
    - Serve Data via API
      - JSON Server
-     
+  
+### Project structure
+- Include a Demo, why?
+  - Directory structure
+  - Framework usage
+  - Testing
+  - Mock API
+  - Automated deployment
+  - Codifies decisions
+  - Interactive examples of worker with Starter
+-  
+  
+  
+  
      
      
 
