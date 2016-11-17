@@ -205,7 +205,7 @@ Automate coding standards and syntax error/convention checking
   - alongside
   - after save
 
-#### Continuous integration
+### Continuous integration
 - set up a CI server to find out when the build breaks
 - Forgot dependency
 - Forgot to update package.json
@@ -249,7 +249,7 @@ Automate coding standards and syntax error/convention checking
   - Selective polyfilling:
      - Send polyfills to browsers that do not support fetch (polyfill.io)
    
-#### Mock API
+### Mock API
 - Why using Mock APIs?
   - Unit Testing
   - Instant response
