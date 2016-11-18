@@ -332,13 +332,53 @@ Automate coding standards and syntax error/convention checking
     - Raygun
   - What to look for:
     - Error metadata
-      - Broswer
+      - Browser
       - Stack trace
       - Previous actions
       - Custom API for enhanced tracking
     - Notifications & Integrations (integrate with popular platforms like Slack)
     - Analytics and filtering
     - Pricing
+
+### Product Deployment
+- Separating the UI from the API
+  - Simple, low-risk, UI only deploys
+  - Separate concerns
+     - Separate teams
+     - Less to understand
+     - Scale back-end separately
+  - Cheap UI hosting
+  - Serve UI via a CDN (content delivery network)
+  - Use the API tech you like (Java, Go, etc)
+- Hosting providers
+- Automated deployment
+  - Amazon Web Services (AWS)
+  - Microsoft Azure
+  - Heroku  (Host API)
+  - Firebase 
+  - Google Cloud Platform
+  - Pubstorm
+  - GitHub Pages (static files)
+  - Surge (static files, Host UI)
+- Handling starter kit updates
+- Inspiration
+- Challenge
+
+### Starter kit updating approaches
+- Yeoman
+  - Commit all code
+  - Scaffold over existing project
+  - Resolve conflicts manually
+- GitHub
+   - Host on GitHub
+   - Fork starter project
+   - Pull changes
+- npm 
+   - Encapsulating in npm package
+   - Update nom package to get latest changes
+   - Restricted to changing internal components
+   
+
 
 
   
