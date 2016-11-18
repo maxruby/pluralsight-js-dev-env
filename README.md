@@ -306,14 +306,42 @@ Automate coding standards and syntax error/convention checking
 
 - Sourcemaps (support debugging in production)
 - Dynamic HTML (production specific concerns)
-  - Reference bundles automatically
-  - Handle dynamic bundle names
+  - Reference bundles automatically (hard-coded, node script to copy or manipulate parts of HTML, html-webpack-plugin) 
+  - Handle dynamic bundle names (save headers from HTTP requests)
   - Inject production-only resources
   - Minify
 - Cache busting (latest version of the code at deployment)
+  - Save cache of files (assets) downloaded for one year, no redownloading from those HTTP requests
+  - Hash bundle file name (save headers from dynamically generated HTML, html-webpack-plugin)
+  - To change the caching mode (stop preventing the redownloading), a unique id hash is saved with the HTTP header
+  - when ready to download again, change the hash by using a new deterministic hash  - use md5 hash webpack-plugin
+  - the hash only changes when the code changes
+  
 - Bundle splitting (provide only the part of the code that has changed)
+   - speed initial page load
+   - avoid reloading all libraries (Angular, loadash, React), bundle in a separate file those which are/not updated / updated
+   - only update what has change in the source code
+   - browser continues to use the cached version
+   - also cache bust CSS files (not good using to generate the CSS code everytime unless it changes) 
+  
 - Error logging
+  - Options:
+    - Track:js
+    - Sentry
+    - New Relic
+    - Raygun
+  - What to look for:
+    - Error metadata
+      - Broswer
+      - Stack trace
+      - Previous actions
+      - Custom API for enhanced tracking
+    - Notifications & Integrations (integrate with popular platforms like Slack)
+    - Analytics and filtering
+    - Pricing
 
+
+  
 
   
      
