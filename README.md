@@ -361,23 +361,27 @@ Automate coding standards and syntax error/convention checking
   - GitHub Pages (static files)
   - Surge (static files, Host UI)
 - Handling starter kit updates
+  - Yeoman
+    - Commit all code
+    - Scaffold over existing project
+    - Resolve conflicts manually
+    - automated generator
+  - GitHub
+     - Host on GitHub
+     - Fork starter project
+     - Pull changes
+  - npm 
+     - Encapsulating in npm package
+     - Update nom package to get latest changes
+     - Restricted to changing internal components
+   - hybrid approach
+     - centralized (builScripts, package.json scripts, webpack.config, .eslintrc) 
+     - decentralized (.editorconfig, .babelrc, .travis.yml, appveyor.yml, package references in package.json)
 - Inspiration
 - Challenge
 
 ### Starter kit updating approaches
-- Yeoman
-  - Commit all code
-  - Scaffold over existing project
-  - Resolve conflicts manually
-- GitHub
-   - Host on GitHub
-   - Fork starter project
-   - Pull changes
-- npm 
-   - Encapsulating in npm package
-   - Update nom package to get latest changes
-   - Restricted to changing internal components
-   
+
 
 
 
